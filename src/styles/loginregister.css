@@ -1,0 +1,100 @@
+.login-page, .register-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    color: var(--text);
+    padding: 20px;
+  }
+  
+  .login-input, .register-input {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    margin: 20px;
+    background-color: var(--form-bg);
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  input[type="text"], input[type="email"], input[type="password"] {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--input-border);
+    font-size: 16px;
+    background-color: var(--input-bg);
+    color: var(--input-text);
+    transition: all 0.3s ease;
+  }
+  
+  input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+    border-color: var(--input-border-focus);
+    outline: none;
+  }
+  
+  button {
+    padding: 12px;
+    border-radius: 8px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: var(--button-hover-bg);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: var(--link-hover-color);
+  }
+  
+  @media (max-width: 768px) {
+    .login-input, .register-input {
+      max-width: 90%;
+    }
+  }
+  
+  :root {
+    --text: #333;
+    --form-bg: #fff;
+    --input-bg: #f0f0f0;
+    --input-border: #ccc;
+    --input-border-focus: #007bff;
+    --input-text: #333;
+    --button-bg: #007bff;
+    --button-text: #fff;
+    --button-hover-bg: #0056b3;
+    --link-color: #007bff;
+    --link-hover-color: #0056b3;
+  }
+  
+  [data-theme="dark"] {
+    --text: #e0e0e0;
+    --form-bg: #1e1e1e;
+    --input-bg: #2c2c2c;
+    --input-border: #444;
+    --input-border-focus: #1e90ff;
+    --input-text: #e0e0e0;
+    --button-bg: #1e90ff;
+    --button-text: #fff;
+    --button-hover-bg: #1c75d8;
+    --link-color: #1e90ff;
+    --link-hover-color: #1c75d8;
+  }
+  
